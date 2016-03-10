@@ -1,0 +1,12 @@
+version: '2'
+services:
+  db:
+    environment:
+      - POSTGRES_PASSWORD=productionpassword
+  owncloud:
+    ports:
+      - "10080:80"
+    volumes:
+      - /var/www/storage.robotx.osaka/apps:/var/www/html/apps
+      - /var/www/storage.robotx.osaka/config:/var/www/html/config
+      - /var/www/storage.robotx.osaka/data:/var/www/html/data

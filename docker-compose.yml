@@ -1,0 +1,15 @@
+version: '2'
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=sometestpassword
+  owncloud:
+    image: owncloud:latest
+    volumes:
+      - /var/www/storage.robotx.osaka/apps:/var/www/html/apps
+      - /var/www/storage.robotx.osaka/config:/var/www/html/config
+      - /var/www/storage.robotx.osaka/data:/var/www/html/data
+    links:
+      - db:db
+
