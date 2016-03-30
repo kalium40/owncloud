@@ -7,6 +7,6 @@ services:
     ports:
       - "10080:80"
     volumes:
-      - /var/www/storage.robotx.osaka/apps:/var/www/html/apps
-      - /var/www/storage.robotx.osaka/config:/var/www/html/config
-      - /var/www/storage.robotx.osaka/data:/var/www/html/data
+      - /var/www/owncloud/apps:/var/www/html/apps
+      - /var/www/owncloud/config:/var/www/html/config
+      - /var/www/owncloud/data:/var/www/html/data
