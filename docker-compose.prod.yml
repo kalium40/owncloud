@@ -4,8 +4,6 @@ services:
     environment:
       - POSTGRES_PASSWORD=productionpassword
   owncloud:
-    ports:
-      - "10080:80"
     volumes:
       - /var/www/owncloud/apps:/var/www/html/apps
       - /var/www/owncloud/config:/var/www/html/config

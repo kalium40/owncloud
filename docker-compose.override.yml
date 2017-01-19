@@ -1,8 +1,6 @@
 version: '2'
 services:
   owncloud:
-    ports:
-      - "80:80"
     volumes:
       - ./data:/var/www/html
 volumes:
